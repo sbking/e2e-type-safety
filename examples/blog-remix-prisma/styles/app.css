@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply outline-transparent transition-[outline-color] focus-visible:outline-sky-400 focus-visible:outline focus-visible:outline-2;
+  }
+
+  button {
+    @apply focus-visible:outline-offset-2 focus-visible:outline-2 focus-visible:outline;
+  }
+}

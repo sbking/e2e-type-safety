@@ -1,0 +1,15 @@
+query BlogPost($slug: String!) {
+  post(slug: $slug) {
+    slug
+    title
+    html
+    imageUrl
+    createdAt
+    comments {
+      id
+      by
+      text
+      createdAt
+    }
+  }
+}

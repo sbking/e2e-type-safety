@@ -1,0 +1,15 @@
+mutation UpdatePost($slug: String!, $data: PostData!) {
+  updatePost(slug: $slug, data: $data) {
+    slug
+    title
+    body
+    imageUrl
+    createdAt
+    comments {
+      id
+      by
+      text
+      createdAt
+    }
+  }
+}

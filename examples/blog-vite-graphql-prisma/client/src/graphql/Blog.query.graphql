@@ -1,0 +1,9 @@
+query Blog {
+  posts {
+    slug
+    title
+    body
+    imageUrl
+    createdAt
+  }
+}

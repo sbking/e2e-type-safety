@@ -1,0 +1,48 @@
+{
+  "name": "blog-vite-graphql-prisma-server",
+  "private": true,
+  "main": "build/server.js",
+  "scripts": {
+    "build": "rimraf build && tsc -p tsconfig.build.json",
+    "codegen": "graphql-codegen",
+    "dev": "concurrently \"pnpm dev:codegen\" \"pnpm dev:node\"",
+    "dev:node": "ts-node-dev src/server.ts",
+    "dev:codegen": "graphql-codegen --watch",
+    "docker": "docker-compose up -d",
+    "setup": "prisma generate && prisma migrate deploy && prisma db seed",
+    "start": "NODE_ENV=production node build/server.js",
+    "typecheck": "tsc -b"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.3.1",
+    "apollo-server": "^3.10.2",
+    "dompurify": "^2.4.0",
+    "graphql": "^16.6.0",
+    "graphql-scalars": "^1.18.0",
+    "jsdom": "^20.0.0",
+    "marked": "^4.1.0",
+    "prismjs": "^1.29.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
+    "@graphql-codegen/cli": "^2.12.0",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-resolvers": "^2.7.3",
+    "@types/dompurify": "^2.3.4",
+    "@types/jsdom": "^20.0.0",
+    "@types/marked": "^4.0.7",
+    "@types/node": "^18.7.18",
+    "@types/node-fetch": "^2.6.2",
+    "@types/prismjs": "^1.26.0",
+    "concurrently": "^7.4.0",
+    "node-fetch": "^2.6.7",
+    "prisma": "^4.3.1",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.3"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}

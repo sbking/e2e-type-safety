@@ -1,0 +1,2 @@
+schema: "examples/blog-vite-graphql-prisma/server/schema.graphqls"
+documents: "examples/blog-vite-graphql-prisma/client/**/*.{graphql}"

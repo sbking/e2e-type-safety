@@ -1,0 +1,14 @@
+schema: schema.graphqls
+generates:
+  ./src/resolvers-types.ts:
+    config:
+      contextType: ./context#Context
+      scalars:
+        DateTime: Date
+      mapperTypeSuffix: Model
+      mappers:
+        Comment: ./models/comments#Comment
+        Post: ./models/posts#Post
+    plugins:
+      - typescript
+      - typescript-resolvers

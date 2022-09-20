@@ -1,0 +1,8 @@
+query AdminPosts {
+  posts {
+    slug
+    title
+    createdAt
+    commentCount
+  }
+}

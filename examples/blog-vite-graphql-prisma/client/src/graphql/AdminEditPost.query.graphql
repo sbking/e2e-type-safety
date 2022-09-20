@@ -1,0 +1,15 @@
+query AdminEditPost($slug: String!) {
+  post(slug: $slug) {
+    slug
+    title
+    body
+    imageUrl
+    createdAt
+    comments {
+      id
+      by
+      text
+      createdAt
+    }
+  }
+}

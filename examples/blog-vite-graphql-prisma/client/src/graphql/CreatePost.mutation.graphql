@@ -1,0 +1,15 @@
+mutation CreatePost($data: PostData!) {
+  createPost(data: $data) {
+    slug
+    title
+    body
+    imageUrl
+    createdAt
+    comments {
+      id
+      by
+      text
+      createdAt
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "blog-vite-graphql-prisma-client",
+  "private": true,
+  "scripts": {
+    "codegen": "graphql-codegen",
+    "dev": "concurrently \"vite\" \"pnpm dev:codegen\"",
+    "dev:codegen": "graphql-codegen --watch",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "date-fns": "^2.29.3",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^2.12.0",
+    "@graphql-codegen/typescript": "^2.7.3",
+    "@graphql-codegen/typescript-operations": "^2.5.3",
+    "@graphql-codegen/typescript-react-apollo": "^3.3.3",
+    "@rollup/plugin-replace": "^2.2.1",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.7",
+    "@types/node": "14.x",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^1.0.1",
+    "autoprefixer": "^10.4.11",
+    "concurrently": "^7.4.0",
+    "postcss": "^8.4.16",
+    "prism-themes": "^1.9.0",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.3.5",
+    "vite": "^2.5.0"
+  }
+}

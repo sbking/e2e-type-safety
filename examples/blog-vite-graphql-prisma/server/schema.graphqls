@@ -1,0 +1,48 @@
+scalar DateTime
+
+type Query {
+  post(slug: String!): Post
+  posts: [Post!]
+}
+
+type Post {
+  slug: String!
+  title: String!
+  body: String!
+  html: String!
+  imageUrl: String!
+  createdAt: DateTime!
+  updatedAt: DateTime!
+  comments: [Comment!]
+  commentCount: Int
+}
+
+type Comment {
+  id: ID!
+  by: String!
+  text: String!
+  createdAt: DateTime!
+}
+
+# ---------------------------
+
+type Mutation {
+  createPost(data: PostData!): Post!
+  updatePost(slug: String!, data: PostData!): Post!
+  deletePost(slug: String!): String!
+  createComment(data: CommentData!): Comment!
+  deleteComment(postSlug: String!, commentId: ID!): ID!
+}
+
+input PostData {
+  title: String!
+  slug: String!
+  imageUrl: String!
+  body: String!
+}
+
+input CommentData {
+  postSlug: String!
+  by: String!
+  text: String!
+}

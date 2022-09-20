@@ -1,0 +1,8 @@
+mutation CreateComment($data: CommentData!) {
+  createComment(data: $data) {
+    id
+    by
+    text
+    createdAt
+  }
+}

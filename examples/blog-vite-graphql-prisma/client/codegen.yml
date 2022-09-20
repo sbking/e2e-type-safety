@@ -1,0 +1,11 @@
+schema: ../server/schema.graphqls
+documents: "./src/**/*.graphql"
+generates:
+  ./src/graphql/generated/schema.ts:
+    config:
+      scalars:
+        DateTime: string
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo

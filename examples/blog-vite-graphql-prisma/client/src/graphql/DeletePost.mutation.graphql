@@ -1,0 +1,3 @@
+mutation DeletePost($slug: String!) {
+  deletePost(slug: $slug)
+}

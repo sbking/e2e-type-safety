@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#__next {
+  @apply flex flex-col items-center bg-stone-100 font-sans text-stone-900 h-full w-full;
+}

@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3001",
     "docker": "docker-compose up -d",
     "build": "next build",
     "setup": "prisma generate && prisma migrate deploy && prisma db seed",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@prisma/client": "^4.3.1",

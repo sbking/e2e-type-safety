@@ -1,10 +1,13 @@
 import fs from "fs";
 import { resolve } from "path";
+import * as dotenv from "dotenv";
 
 import { ApolloServer } from "apollo-server";
 
 import { context } from "./context";
 import { resolvers } from "./resolvers";
+
+dotenv.config();
 
 const typeDefs = fs.readFileSync(
   resolve(__dirname, "..", "schema.graphqls"),

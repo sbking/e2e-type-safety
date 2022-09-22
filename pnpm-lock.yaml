@@ -235,6 +235,7 @@ importers:
       apollo-server: ^3.10.2
       concurrently: ^7.4.0
       dompurify: ^2.4.0
+      dotenv: ^16.0.2
       graphql: ^16.6.0
       graphql-scalars: ^1.18.0
       jsdom: ^20.0.0
@@ -250,6 +251,7 @@ importers:
       '@prisma/client': 4.3.1_prisma@4.3.1
       apollo-server: 3.10.2_graphql@16.6.0
       dompurify: 2.4.0
+      dotenv: 16.0.2
       graphql: 16.6.0
       graphql-scalars: 1.18.0_graphql@16.6.0
       jsdom: 20.0.0
@@ -5185,7 +5187,6 @@ packages:
   /dotenv/16.0.2:
     resolution: {integrity: sha512-JvpYKUmzQhYoIFgK2MOnF3bciIZoItIIoryihy0rIA+H4Jy0FmgyKYAHCTN98P5ybGSJcIFbh6QKeJdtZd1qhA==}
     engines: {node: '>=12'}
-    dev: true
 
   /dset/3.1.2:
     resolution: {integrity: sha512-g/M9sqy3oHe477Ar4voQxWtaPIFw1jTdKZuomOjhCcBx9nHUNn0pu6NopuFFrTh/TRZIKEj+76vLWFu9BNKk+Q==}

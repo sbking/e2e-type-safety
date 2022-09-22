@@ -11,7 +11,7 @@ export function NavBar() {
       <nav className="container flex flex-auto items-center px-6">
         <h1 className="mr-auto select-none font-serif text-4xl">
           <Link to="/" className="outline-sky-300">
-            Ipsum
+            Ipsum GraphQL
           </Link>
         </h1>
         {sections.map(({ to, children }) => (
